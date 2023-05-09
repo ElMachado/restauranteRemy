@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.restaurante.remy.dataprovider.UsuarioDataProviderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-09T07:24:59" hostname="PVID9790Q13" time="1.907">
+<testsuite name="com.restaurante.remy.dataprovider.UsuarioDataProviderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-09T08:45:57" hostname="PVID9790Q13" time="1.733">
   <properties/>
-  <testcase name="insertarUsuario" classname="com.restaurante.remy.dataprovider.UsuarioDataProviderTest" time="1.907"/>
+  <testcase name="buscarNombre" classname="com.restaurante.remy.dataprovider.UsuarioDataProviderTest" time="1.733"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

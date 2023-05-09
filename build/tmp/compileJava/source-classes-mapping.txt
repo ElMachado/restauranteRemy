@@ -14,17 +14,17 @@ com/restaurante/remy/entity/PedidoIdEntity.java
  com.restaurante.remy.entity.PedidoIdEntity
 com/restaurante/remy/entity/MesaEntity.java
  com.restaurante.remy.entity.MesaEntity
-com/restaurante/remy/repository/IUsuarioRepository.java
- com.restaurante.remy.repository.IUsuarioRepository
+com/restaurante/remy/dataprovider/IUsuarioDataProvider.java
+ com.restaurante.remy.dataprovider.IUsuarioDataProvider
 com/restaurante/remy/entity/ClienteEntity.java
  com.restaurante.remy.entity.ClienteEntity
-com/restaurante/remy/dataprovider/mysql/UsuarioDataProvider.java
- com.restaurante.remy.dataprovider.mysql.UsuarioDataProvider
+com/restaurante/remy/entity/UserEntity.java
+ com.restaurante.remy.entity.UserEntity
 com/restaurante/remy/entity/UsuarioEntity.java
  com.restaurante.remy.entity.UsuarioEntity
 com/restaurante/remy/entity/PedidoEntity.java
  com.restaurante.remy.entity.PedidoEntity
-com/restaurante/remy/dataprovider/IUsuarioDataProvider.java
- com.restaurante.remy.dataprovider.IUsuarioDataProvider
-com/restaurante/remy/entity/UserEntity.java
- com.restaurante.remy.entity.UserEntity
+com/restaurante/remy/repository/IUsuarioRepository.java
+ com.restaurante.remy.repository.IUsuarioRepository
+com/restaurante/remy/dataprovider/mysql/UsuarioDataProvider.java
+ com.restaurante.remy.dataprovider.mysql.UsuarioDataProvider

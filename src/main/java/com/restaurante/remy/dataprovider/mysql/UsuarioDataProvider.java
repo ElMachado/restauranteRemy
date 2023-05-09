@@ -6,6 +6,8 @@ import com.restaurante.remy.repository.IUsuarioRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,7 +31,7 @@ public class UsuarioDataProvider implements IUsuarioDataProvider {
     }
 
     @Override
-    public UsuarioEntity findIDUsuario(Integer idUsuario) {
+    public UsuarioEntity findIdUsuario(Integer idUsuario) {
         Optional <UsuarioEntity> usuarioEntity = iUsuarioRepository.findById(idUsuario);
         return usuarioEntity.get();
     }
@@ -38,4 +40,15 @@ public class UsuarioDataProvider implements IUsuarioDataProvider {
     public void deleteID(UsuarioEntity entity) {
        iUsuarioRepository.delete(entity);
     }
+
+    @Override
+    public List<UsuarioEntity> findAll() {
+        List<UsuarioEntity> entities= iUsuarioRepository.findAll();
+        return entities;
+    }
+    public UsuarioEntity findIdUsuarioNombre(String nombre) {
+        UsuarioEntity usuarioEntity = iUsuarioRepository.findByUsuarioNombre(nombre);
+        return usuarioEntity;
+    }
+
 }
