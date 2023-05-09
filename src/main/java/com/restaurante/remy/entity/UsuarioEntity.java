@@ -1,12 +1,12 @@
 package com.restaurante.remy.entity;
 
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.Instant;
 
 @Getter
@@ -16,6 +16,7 @@ import java.time.Instant;
 public class UsuarioEntity {
     @Id
     @Column(name = "idUsuario", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "nombre", nullable = false, length = 45)
@@ -43,13 +44,15 @@ public class UsuarioEntity {
     private String tipo;
 
     @Column(name = "fecha_creacion", nullable = false)
+    @CreationTimestamp
     private Instant fechaCreacion;
 
     @Column(name = "fecha_modificacion")
+    @UpdateTimestamp
     private Instant fechaModificacion;
 
-    @Column(name = "usuario_crecion", length = 45)
-    private String usuarioCrecion;
+    @Column(name = "usuario_creacion", length = 45)
+    private String usuarioCreacion;
 
     @Column(name = "usuario_modificacion", length = 45)
     private String usuarioModificacion;

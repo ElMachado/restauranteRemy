@@ -1,17 +1,20 @@
 package com.restaurante.remy.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.Instant;
-
+@Data
 @Getter
 @Setter
 @Entity
 @Table(name = "user")
+@AllArgsConstructor
+@NoArgsConstructor
+
+
 public class UserEntity {
     @Column(name = "username", nullable = false, length = 16)
     private String username;
