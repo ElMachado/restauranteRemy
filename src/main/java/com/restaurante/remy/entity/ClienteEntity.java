@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "cliente")
-public class Cliente {
+public class ClienteEntity {
     @Id
     @Column(name = "idcliente", nullable = false)
     private Integer id;

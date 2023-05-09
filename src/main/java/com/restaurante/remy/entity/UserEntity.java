@@ -12,7 +12,7 @@ import java.time.Instant;
 @Setter
 @Entity
 @Table(name = "user")
-public class User {
+public class UserEntity {
     @Column(name = "username", nullable = false, length = 16)
     private String username;
 

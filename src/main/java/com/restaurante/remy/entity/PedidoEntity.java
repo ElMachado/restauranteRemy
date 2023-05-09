@@ -9,17 +9,28 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-@Table(name = "reserva")
-public class Reserva {
-    @Id
-    @Column(name = "idreserva", nullable = false)
-    private Integer id;
+@Table(name = "pedido")
+public class PedidoEntity {
+    @EmbeddedId
+    private PedidoIdEntity id;
 
     @Column(name = "fecha", nullable = false)
     private Instant fecha;
 
-    @Column(name = "finalizada", nullable = false)
-    private Byte finalizada;
+    @Column(name = "precio", nullable = false)
+    private Double precio;
+
+    @Column(name = "pagado", nullable = false)
+    private Byte pagado;
+
+    @Column(name = "servido", nullable = false)
+    private Byte servido;
+
+    @Column(name = "activo", nullable = false)
+    private Byte activo;
+
+    @Column(name = "confirmado", nullable = false)
+    private Byte confirmado;
 
     @Column(name = "fecha_creacion", nullable = false)
     private Instant fechaCreacion;
@@ -34,7 +45,11 @@ public class Reserva {
     private String usuarioModificacion;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "Usuario_idUsuario1", nullable = false)
+    private UsuarioEntity usuarioEntityIdusuario1;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "Mesa_idMesa", nullable = false)
-    private Mesa mesaIdmesa;
+    private MesaEntity mesaEntityIdmesa;
 
 }

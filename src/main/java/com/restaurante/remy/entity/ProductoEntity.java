@@ -9,9 +9,9 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "producto")
-public class Producto {
+public class ProductoEntity {
     @EmbeddedId
-    private ProductoId id;
+    private ProductoIdEntity id;
 
     @Column(name = "nombre", length = 45)
     private String nombre;
@@ -27,10 +27,10 @@ public class Producto {
             @JoinColumn(name = "Pedido_idPedido1", referencedColumnName = "idPedido", nullable = false),
             @JoinColumn(name = "Pedido_Usuario_idUsuario1", referencedColumnName = "Usuario_idUsuario", nullable = false)
     })
-    private Pedido pedido;
+    private PedidoEntity pedidoEntity;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tipoProducto_idtipoProducto", nullable = false)
-    private Tipoproducto tipoproductoIdtipoproducto;
+    private TipoproductoEntity tipoproductoEntityIdtipoproducto;
 
 }
