@@ -32,20 +32,21 @@ public class UsuarioDataProvider implements IUsuarioDataProvider {
 
     @Override
     public UsuarioEntity findIdUsuario(Integer idUsuario) {
-        Optional <UsuarioEntity> usuarioEntity = iUsuarioRepository.findById(idUsuario);
+        Optional<UsuarioEntity> usuarioEntity = iUsuarioRepository.findById(idUsuario);
         return usuarioEntity.get();
     }
 
     @Override
     public void deleteID(UsuarioEntity entity) {
-       iUsuarioRepository.delete(entity);
+        iUsuarioRepository.save(entity);
     }
 
     @Override
     public List<UsuarioEntity> findAll() {
-        List<UsuarioEntity> entities= iUsuarioRepository.findAll();
+        List<UsuarioEntity> entities = iUsuarioRepository.findAll();
         return entities;
     }
+
     public UsuarioEntity findIdUsuarioNombre(String nombre) {
         UsuarioEntity usuarioEntity = iUsuarioRepository.findByUsuarioNombre(nombre);
         return usuarioEntity;

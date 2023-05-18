@@ -1,8 +1,6 @@
 package com.restaurante.remy.entity;
 
-import lombok.Generated;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -12,7 +10,10 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
+@Builder
+@AllArgsConstructor
 @Table(name = "usuario")
+@NoArgsConstructor
 public class UsuarioEntity {
     @Id
     @Column(name = "idUsuario", nullable = false)
@@ -57,4 +58,6 @@ public class UsuarioEntity {
     @Column(name = "usuario_modificacion", length = 45)
     private String usuarioModificacion;
 
+    @Column(name = "activo", nullable = false,length = 1)
+    private String activo;
 }

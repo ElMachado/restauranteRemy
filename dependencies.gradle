@@ -5,7 +5,8 @@ ext {
             [group: 'org.springframework.boot', name: 'spring-boot-starter'],
             [group: 'org.springframework.boot', name: 'spring-boot-starter-web'],
             [group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'],
-            [group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa']
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'],
+
     ]
 
     SPRING_BOOT_UT = [
@@ -38,6 +39,9 @@ ext {
     GSON = [
             [group: 'com.google.code.gson', name: 'gson', version: gsonVersion]
 
+    ]
+    JAVAX = [
+            [group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final']
     ]
 
 }

@@ -7,6 +7,7 @@ import com.restaurante.remy.repository.IUsuarioRepository;
 import org.aspectj.weaver.patterns.IVerificationRequired;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -14,12 +15,12 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static com.restaurante.remy.factory.MockFactory.getUsuario;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -64,11 +65,11 @@ public class UsuarioDataProviderTest {
         Optional <UsuarioEntity> usuarioEntity = Optional.of(getUsuario());
         Mockito.when(iUsuarioRepository.findById(1212)).thenReturn(usuarioEntity);
         UsuarioEntity result = usuarioDataProvider.findIdUsuario(1212);
-        assertEquals(getUsuario(),result);
+        assertEquals(usuarioEntity.get(),result);
         }
 
         @Test
-    public void EliminarUsuario(){
+    public void eliminarUsuario(){
             UsuarioEntity usuarioEntity = new UsuarioEntity();
             usuarioEntity.setNombre("pepito");
             usuarioEntity.setApellido1("Pèrez");
@@ -84,18 +85,18 @@ public class UsuarioDataProviderTest {
 
 
         @Test
-        public void BuscarTodos(){
+        public void buscarTodos(){
             List<UsuarioEntity> usuarioEntityList = MockFactory.getLisUsuario();
             Mockito.when(iUsuarioRepository.findAll()).thenReturn(usuarioEntityList);
             List<UsuarioEntity> result = usuarioDataProvider.findAll();
-            assertEquals(usuarioEntityList,result);
+            Assertions.assertEquals(usuarioEntityList,result);
         }
         @Test
     public void buscarNombre(){
         UsuarioEntity usuarioEntity = MockFactory.getUsuario();
         Mockito.when(iUsuarioRepository.findByUsuarioNombre("pepito")).thenReturn(usuarioEntity);
         UsuarioEntity result = usuarioDataProvider.findIdUsuarioNombre("pepito");
-        assertEquals(usuarioEntity,result);
+        Assertions.assertEquals(usuarioEntity,result);
         }
 }
 

@@ -2,3 +2,5 @@ com/restaurante/remy/factory/MockFactory.java
  com.restaurante.remy.factory.MockFactory
 com/restaurante/remy/dataprovider/UsuarioDataProviderTest.java
  com.restaurante.remy.dataprovider.UsuarioDataProviderTest
+com/restaurante/remy/dataprovider/MesaDataProviderTest.java
+ com.restaurante.remy.dataprovider.MesaDataProviderTest

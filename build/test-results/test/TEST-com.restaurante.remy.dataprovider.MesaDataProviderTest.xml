@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.restaurante.remy.dataprovider.MesaDataProviderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-05-17T22:05:28" hostname="PVID9790Q13" time="1.924">
+  <properties/>
+  <testcase name="actualizarMesa" classname="com.restaurante.remy.dataprovider.MesaDataProviderTest" time="1.891"/>
+  <testcase name="buscarMesa" classname="com.restaurante.remy.dataprovider.MesaDataProviderTest" time="0.022"/>
+  <testcase name="eliminarMesa" classname="com.restaurante.remy.dataprovider.MesaDataProviderTest" time="0.002"/>
+  <testcase name="buscarTodas" classname="com.restaurante.remy.dataprovider.MesaDataProviderTest" time="0.002"/>
+  <testcase name="insertarMesa" classname="com.restaurante.remy.dataprovider.MesaDataProviderTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
