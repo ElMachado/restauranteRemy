@@ -15,4 +15,5 @@ public interface IUsuarioDataProvider {
 
     List<UsuarioEntity> findAll();
 
+    UsuarioEntity findUsuarioNombre(String nombre);
 }

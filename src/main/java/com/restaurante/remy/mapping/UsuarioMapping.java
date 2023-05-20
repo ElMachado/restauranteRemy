@@ -4,17 +4,18 @@ import com.restaurante.remy.dto.UsuarioDTO;
 import com.restaurante.remy.entity.UsuarioEntity;
 
 public class UsuarioMapping {
-    UsuarioEntity usuarioEntityByDTO(UsuarioDTO usuarioDTO) {
-        return UsuarioEntity.builder()
-                .id(usuarioDTO.getId())
-                .nick(usuarioDTO.getNick())
-                .clave(usuarioDTO.getClave())
-                .tipo(usuarioDTO.getTipo())
-                .email(usuarioDTO.getEmail())
-                .apellido1(usuarioDTO.getApellido1())
-                .apellido2(usuarioDTO.getApellido2())
-                .telefono(usuarioDTO.getTelefono())
-                .build();
+   public UsuarioEntity usuarioEntityByDTO(UsuarioDTO usuarioDTO) {
+    return UsuarioEntity.builder()
+        .id(usuarioDTO.getId())
+        .nick(usuarioDTO.getNick())
+        .clave(usuarioDTO.getClave())
+        .tipo(usuarioDTO.getTipo())
+        .email(usuarioDTO.getEmail())
+        .apellido1(usuarioDTO.getApellido1())
+        .apellido2(usuarioDTO.getApellido2())
+        .telefono(usuarioDTO.getTelefono())
+        .activo(usuarioDTO.getActivo())
+        .build();
     }
     public UsuarioDTO usuarioDTO (UsuarioEntity usuarioEntity){
     return UsuarioDTO.builder()
@@ -29,4 +30,5 @@ public class UsuarioMapping {
             .tipo(usuarioEntity.getTipo())
             .build();
     }
+
 }

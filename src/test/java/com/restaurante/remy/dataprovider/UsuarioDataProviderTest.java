@@ -80,7 +80,7 @@ public class UsuarioDataProviderTest {
             usuarioEntity.setTipo("gerente");
             usuarioEntity.setUsuarioCreacion("pepito");
             usuarioDataProvider.deleteID(usuarioEntity);
-            verify(iUsuarioRepository).delete(usuarioEntity);
+            verify(iUsuarioRepository).save(usuarioEntity);
         }
 
 

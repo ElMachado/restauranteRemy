@@ -14,7 +14,6 @@ import java.util.Optional;
 @AllArgsConstructor
 public class UsuarioDataProvider implements IUsuarioDataProvider {
 
-
     private final IUsuarioRepository iUsuarioRepository;
 
 
@@ -45,6 +44,11 @@ public class UsuarioDataProvider implements IUsuarioDataProvider {
     public List<UsuarioEntity> findAll() {
         List<UsuarioEntity> entities = iUsuarioRepository.findAll();
         return entities;
+    }
+
+    @Override
+    public UsuarioEntity findUsuarioNombre(String nombre) {
+        return null;
     }
 
     public UsuarioEntity findIdUsuarioNombre(String nombre) {
